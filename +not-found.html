@@ -60,6 +60,76 @@ body { overscroll-behavior: none; }
 /* Anchor styling for the privacy link and footer links — kept restrained. */
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.cashpane-bento-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cashpane-bento-tile {
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.cashpane-bento-wide,
+.cashpane-bento-medium,
+.cashpane-bento-small {
+  flex-basis: 100%;
+}
+
+.cashpane-bento-wide {
+  min-height: 460px;
+}
+
+.cashpane-bento-medium {
+  min-height: 280px;
+}
+
+.cashpane-bento-small {
+  min-height: 220px;
+}
+
+.cashpane-wide-row {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+  .cashpane-bento-wide {
+    flex-basis: 100%;
+    min-height: 380px;
+  }
+
+  .cashpane-bento-medium,
+  .cashpane-bento-small {
+    flex-basis: 49%;
+  }
+
+  .cashpane-wide-row {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cashpane-bento-wide {
+    flex-basis: 66%;
+  }
+
+  .cashpane-bento-medium {
+    flex-basis: 49%;
+  }
+
+  .cashpane-bento-small {
+    flex-basis: 32%;
+  }
+}
 </style><style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
@@ -375,5 +445,5 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @keyframes r-1pzkwqh{0%{transform:translateY(100%);}100%{transform:translateY(0%);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-q67da2{0%{transform:translateX(-100%);}100%{transform:translateX(400%);}}
-@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><!--$--><!--/$--><!--/$--></div></div><script src="/cashpane-landing/_expo/static/js/web/entry-8de110e6ba1c1660b30df1778a77fecd.js" defer></script>
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><!--$--><!--/$--><!--/$--></div></div><script src="/cashpane-landing/_expo/static/js/web/entry-dd26f325bccfafcf0a05a014c2405fed.js" defer></script>
 </body></html>
