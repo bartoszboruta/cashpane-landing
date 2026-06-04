@@ -25,6 +25,65 @@
   --landing-fg: #f9f8f7;
 }
 
+:root {
+  --cashpane-page-pad: 20px;
+  --cashpane-hero-bottom-gap: 24px;
+  --cashpane-hero-font-size: clamp(34px, 9vw, 44px);
+  --cashpane-hero-line-height: clamp(38px, 9.6vw, 48px);
+  --cashpane-bottom-cta-font-size: clamp(26px, 7vw, 34px);
+  --cashpane-bento-wide-basis: 100%;
+  --cashpane-bento-wide-min-height: 460px;
+  --cashpane-bento-medium-basis: 100%;
+  --cashpane-bento-small-basis: 100%;
+  --cashpane-bento-medium-min-height: 280px;
+  --cashpane-bento-small-min-height: 220px;
+  --cashpane-wide-row-direction: column;
+  --cashpane-wide-row-align: flex-start;
+  --cashpane-wide-row-gap: 28px;
+  --cashpane-wide-phone-width: 176px;
+  --cashpane-wide-phone-height: 363px;
+  --cashpane-faq-columns: 1fr;
+  --cashpane-footer-row-direction: column;
+  --cashpane-footer-row-align: flex-start;
+  --cashpane-footer-link-gap: 16px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --cashpane-page-pad: 28px;
+    --cashpane-hero-bottom-gap: 28px;
+    --cashpane-hero-font-size: clamp(44px, 5.8vw, 56px);
+    --cashpane-hero-line-height: clamp(48px, 6.1vw, 60px);
+    --cashpane-bottom-cta-font-size: clamp(30px, 4vw, 36px);
+    --cashpane-bento-wide-basis: 100%;
+    --cashpane-bento-wide-min-height: 380px;
+    --cashpane-bento-medium-basis: 49%;
+    --cashpane-bento-small-basis: 49%;
+    --cashpane-wide-row-direction: row;
+    --cashpane-wide-row-align: center;
+    --cashpane-wide-row-gap: 24px;
+    --cashpane-wide-phone-width: 198.4px;
+    --cashpane-wide-phone-height: 409.2px;
+    --cashpane-faq-columns: repeat(2, 1fr);
+    --cashpane-footer-row-direction: row;
+    --cashpane-footer-row-align: center;
+    --cashpane-footer-link-gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --cashpane-page-pad: 32px;
+    --cashpane-hero-bottom-gap: 32px;
+    --cashpane-hero-font-size: clamp(54px, 5vw, 68px);
+    --cashpane-hero-line-height: clamp(58px, 5.3vw, 72px);
+    --cashpane-bottom-cta-font-size: clamp(34px, 3.2vw, 40px);
+    --cashpane-bento-wide-basis: 66%;
+    --cashpane-bento-medium-basis: 49%;
+    --cashpane-bento-small-basis: 32%;
+  }
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -235,7 +294,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1euja1d{margin-bottom:22px;}
 .r-1euycsn{flex-direction:row-reverse;}
 .r-1ewcgjf{box-shadow:0px 1px 3px rgba(0,0,0,0.5);}
-.r-1fdih9r{gap:24px;}
 .r-1ff274t{text-align:right;}
 .r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
 .r-1g80hic{opacity:0.8;}
@@ -292,11 +350,13 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1sp8lnq{max-width:1200px;}
 .r-1ssbvtb{gap:12px;}
 .r-1sxrcry{background-size:auto;}
+.r-1tdh1e5{flex-direction:var(--cashpane-wide-row-direction);}
 .r-1udbk01{text-overflow:ellipsis;}
 .r-1ui5ee8{font-size:32px;}
 .r-1vr29t4{font-weight:800;}
 .r-1w6e6rj{flex-wrap:wrap;}
 .r-1wbh5a2{flex-shrink:1;}
+.r-1wfcncb{gap:var(--cashpane-footer-link-gap);}
 .r-1wtj0ep{justify-content:space-between;}
 .r-1wyyakw{z-index:-1;}
 .r-1x0dztd{line-height:80px;}
@@ -331,13 +391,13 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-76blku{height:21px;}
 .r-7cikom{font-size:inherit;}
 .r-7q8q6z{cursor:default;}
-.r-840iz4{gap:28px;}
 .r-87bcf5{font-size:80px;}
 .r-8akbws{-webkit-box-orient:vertical;}
 .r-8ay8q1{letter-spacing:0.1px;}
 .r-8d26hk{margin-bottom:40px;}
 .r-97e31f{padding-bottom:env(safe-area-inset-bottom);}
 .r-9aw3ui{gap:4px;}
+.r-9cs0ql{align-items:var(--cashpane-footer-row-align);}
 .r-9daxd3{animation-duration:250ms;}
 .r-adyw6z{font-size:20px;}
 .r-agouwx{transform:translateZ(0);}
@@ -365,9 +425,11 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-f4gmv6{gap:16px;}
 .r-fd4yh7{padding-top:32px;}
 .r-fdjqy7{text-align:left;}
+.r-fipjl6{gap:var(--cashpane-wide-row-gap);}
 .r-foe95m{letter-spacing:-0.4px;}
 .r-g3mlsw{animation-name:r-t2lo5v;}
 .r-ghxds0{transform:translateY(0%);}
+.r-gmg5na{flex-direction:var(--cashpane-footer-row-direction);}
 .r-gtdqiz{position:-webkit-sticky;position:sticky;}
 .r-h0d30l{height:28px;}
 .r-hxflta{padding-right:env(safe-area-inset-right);}
@@ -431,6 +493,7 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-z7lthc{padding-bottom:60px;}
 .r-z80fyv{height:20px;}
 .r-zchlnj{right:0px;}
+.r-zd6xgm{align-items:var(--cashpane-wide-row-align);}
 .r-zz5t5d{font-size:28px;}
 @-webkit-keyframes r-11cv4x{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
 @-webkit-keyframes r-1iq689l{0%{transform:translateY(0%);}100%{transform:translateY(100%);}}
@@ -443,5 +506,5 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @keyframes r-1pzkwqh{0%{transform:translateY(100%);}100%{transform:translateY(0%);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-q67da2{0%{transform:translateX(-100%);}100%{transform:translateX(400%);}}
-@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><div class="css-g5y9jx" style="flex:1"><div style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;visibility:hidden"></div><div class="css-g5y9jx r-13awgt0"><div class="css-g5y9jx r-13awgt0 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" style="background-color:rgba(242,242,242,1.00);display:flex"><div class="css-g5y9jx r-13awgt0"><div class="css-g5y9jx r-13awgt0"><!--$--><!--/$--></div></div></div></div></div><!--/$--></div></div><script src="/cashpane-landing/_expo/static/js/web/entry-88f268c57c0f8ffaa34bcebe2e54bc41.js" defer></script>
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><div class="css-g5y9jx" style="flex:1"><div style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;visibility:hidden"></div><div class="css-g5y9jx r-13awgt0"><div class="css-g5y9jx r-13awgt0 r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af" style="background-color:rgba(242,242,242,1.00);display:flex"><div class="css-g5y9jx r-13awgt0"><div class="css-g5y9jx r-13awgt0"><!--$--><!--/$--></div></div></div></div></div><!--/$--></div></div><script src="/cashpane-landing/_expo/static/js/web/entry-d4531ddbb0854304afa0a7faa8ab0084.js" defer></script>
 </body></html>
